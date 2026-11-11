@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosas que escribí - Camila Rasnosky</title>
+  
+  <!-- Protección contra bots e indexación -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="layout">
+    <!-- ÍNDICE LATERAL MINIMIZABLE -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Índice</h2>
+        <button id="btn-toggle-sidebar" onclick="toggleSidebar()" title="Minimizar índice">
+          ◀
+        </button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="categoria bio-destacada">
+          <ul>
+            <li>
+              <button id="btn-acerca-de-mi" onclick="cargarTexto('acerca-de-mi')">
+                ✨ Acerca de mí
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="categoria">
+          <h3>Curso de Cine</h3>
+          <ul>
+            <li>
+              <button id="btn-la-odisea-de-los-giles-desguionado" onclick="cargarTexto('la-odisea-de-los-giles-desguionado')">
+                La odisea de los giles (Desguionado)
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="categoria">
+          <h3>Teatro</h3>
+          <ul>
+            <li>
+              <button id="btn-wara-y-el-sudor-del-sol" onclick="cargarTexto('wara-y-el-sudor-del-sol')">
+                Wara y el sudor del sol
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="categoria">
+          <h3>Cuentos</h3>
+          <ul>
+            <li>
+              <button id="btn-de-juan-luis-y-gustavo" onclick="cargarTexto('de-juan-luis-y-gustavo')">
+                De Juan Luis y Gustavo
+              </button>
+            </li>
+            <li>
+              <button id="btn-la-aventura" onclick="cargarTexto('la-aventura')">
+                La aventura
+              </button>
+            </li>
+            <li>
+              <button id="btn-la-casa" onclick="cargarTexto('la-casa')">
+                La casa
+              </button>
+            </li>
+            <li>
+              <button id="btn-la-casa-de-la-silla-mecedora" onclick="cargarTexto('la-casa-de-la-silla-mecedora')">
+                La casa de la silla mecedora
+              </button>
+            </li>
+            <li>
+              <button id="btn-la-casa-estaba-en-silencio" onclick="cargarTexto('la-casa-estaba-en-silencio')">
+                La casa estaba en silencio
+              </button>
+            </li>
+            <li>
+              <button id="btn-la-petaca" onclick="cargarTexto('la-petaca')">
+                La petaca
+              </button>
+            </li>
+            <li>
+              <button id="btn-lucia-capitulo-1" onclick="cargarTexto('lucia-capitulo-1')">
+                Lucía (Capítulo 1: La decisión)
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="categoria">
+          <h3>Proyecto / Fichas</h3>
+          <ul>
+            <li>
+              <button id="btn-mapa-de-personajes-lucia" onclick="cargarTexto('mapa-de-personajes-lucia')">
+                Mapa de Personajes: Lucía
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="categoria">
+          <h3>Poemas / Relatos cortos</h3>
+          <ul>
+            <li>
+              <button id="btn-abuela" onclick="cargarTexto('abuela')">
+                Abuela
+              </button>
+            </li>
+            <li>
+              <button id="btn-asesino" onclick="cargarTexto('asesino')">
+                Asesino
+              </button>
+            </li>
+            <li>
+              <button id="btn-charly" onclick="cargarTexto('charly')">
+                Charly
+              </button>
+            </li>
+            <li>
+              <button id="btn-cuando-me-duerma-mecida-en-las-olas" onclick="cargarTexto('cuando-me-duerma-mecida-en-las-olas')">
+                Cuando me duerma mecida en las olas
+              </button>
+            </li>
+            <li>
+              <button id="btn-de-uner" onclick="cargarTexto('de-uner')">
+                De Uner
+              </button>
+            </li>
+            <li>
+              <button id="btn-dia-uno" onclick="cargarTexto('dia-uno')">
+                Día uno
+              </button>
+            </li>
+            <li>
+              <button id="btn-dolor" onclick="cargarTexto('dolor')">
+                Dolor
+              </button>
+            </li>
+            <li>
+              <button id="btn-el-juego" onclick="cargarTexto('el-juego')">
+                El juego
+              </button>
+            </li>
+            <li>
+              <button id="btn-emilia" onclick="cargarTexto('emilia')">
+                Emilia
+              </button>
+            </li>
+            <li>
+              <button id="btn-ese-lugar" onclick="cargarTexto('ese-lugar')">
+                Ese lugar
+              </button>
+            </li>
+            <li>
+              <button id="btn-estaba-segura" onclick="cargarTexto('estaba-segura')">
+                Estaba segura
+              </button>
+            </li>
+            <li>
+              <button id="btn-haiku-lagrimas" onclick="cargarTexto('haiku-lagrimas')">
+                Haiku
+              </button>
+            </li>
+            <li>
+              <button id="btn-historia" onclick="cargarTexto('historia')">
+                Historia
+              </button>
+            </li>
+            <li>
+              <button id="btn-historia-2" onclick="cargarTexto('historia-2')">
+                Historia 2
+              </button>
+            </li>
+            <li>
+              <button id="btn-mar" onclick="cargarTexto('mar')">
+                Mar
+              </button>
+            </li>
+            <li>
+              <button id="btn-mariposas" onclick="cargarTexto('mariposas')">
+                Mariposas
+              </button>
+            </li>
+            <li>
+              <button id="btn-necesito-redactarte-una-historia" onclick="cargarTexto('necesito-redactarte-una-historia')">
+                Necesito redactarte una historia
+              </button>
+            </li>
+            <li>
+              <button id="btn-otro-triunfo-para-el-traidor" onclick="cargarTexto('otro-triunfo-para-el-traidor')">
+                Otro triunfo para el traidor
+              </button>
+            </li>
+            <li>
+              <button id="btn-perdedor" onclick="cargarTexto('perdedor')">
+                Perdedor
+              </button>
+            </li>
+            <li>
+              <button id="btn-politica-y-pasiones" onclick="cargarTexto('politica-y-pasiones')">
+                Política y pasiones
+              </button>
+            </li>
+            <li>
+              <button id="btn-quiero-encontrar-cual-fue-el-error" onclick="cargarTexto('quiero-encontrar-cual-fue-el-error')">
+                Quiero encontrar cuál fue el error
+              </button>
+            </li>
+            <li>
+              <button id="btn-relaciones-peligrosas" onclick="cargarTexto('relaciones-peligrosas')">
+                Relaciones peligrosas
+              </button>
+            </li>
+            <li>
+              <button id="btn-seres" onclick="cargarTexto('seres')">
+                Seres
+              </button>
+            </li>
+            <li>
+              <button id="btn-similitudes" onclick="cargarTexto('similitudes')">
+                Similitudes
+              </button>
+            </li>
+            <li>
+              <button id="btn-sos-magico" onclick="cargarTexto('sos-magico')">
+                Sos mágico
+              </button>
+            </li>
+            <li>
+              <button id="btn-sos-magico-2" onclick="cargarTexto('sos-magico-2')">
+                Sos mágico 2
+              </button>
+            </li>
+            <li>
+              <button id="btn-sos-magico-agustin" onclick="cargarTexto('sos-magico-agustin')">
+                Sos mágico Agustín
+              </button>
+            </li>
+            <li>
+              <button id="btn-tizas" onclick="cargarTexto('tizas')">
+                Tizas
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- BOTÓN FLOTANTE PARA REABRIR EL ÍNDICE -->
+    <button id="btn-open-sidebar" onclick="toggleSidebar()" title="Abrir índice">
+      ▶ Índice
+    </button>
+
+    <!-- VISOR DE CONTENIDO -->
+    <main class="content-viewer">
+      <article id="escrito-contenedor">
+        <h1 id="titulo-escrito">Cargando textos...</h1>
+        <p id="fecha-escrito" class="fecha"></p>
+        <hr>
+        <div id="cuerpo-escrito">
+          <p>Hola, te invito a elegir entre los títulos del índice y comenzar a leer lo que alguna vez escribí.</p>
+        </div>
+      </article>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <p>&copy; Camila Rasnosky 2026</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
